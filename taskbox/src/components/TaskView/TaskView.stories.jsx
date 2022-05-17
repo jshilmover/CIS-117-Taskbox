@@ -20,26 +20,24 @@ Default.args = {
 export const Pinned = Template.bind();
 Pinned.args = {
   task: {
-    id: "1",
-    title: "Test Task",
-    state: "TASK_INBOX",
+    ...Default.args.task,
+    state: "TASK_PINNED",
   },
 };
 
 export const Archived = Template.bind();
 Archived.args = {
   task: {
-    id: "1",
-    title: "Test Task",
-    state: "TASK_INBOX",
+    ...Default.args.task,
+    state: "TASK_ARCHIVED",
   },
 };
 
 export const LongTitle = Template.bind();
 LongTitle.args = {
   task: {
-    id: "1",
-    title: "Test Task",
-    state: "TASK_INBOX",
+    ...Default.args.task,
+    title:
+      "This is a very very very very very very very very very large absurdly large big title that will show how a long long very long title behaves in the task",
   },
 };
