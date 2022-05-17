@@ -9,13 +9,37 @@ export default {
 const Template = (args) => <TaskView {...args} />;
 
 export const Default = Template.bind();
-Default.args = {};
+Default.args = {
+  task: {
+    id: "1",
+    title: "Test Task",
+    state: "TASK_INBOX",
+  },
+};
 
 export const Pinned = Template.bind();
-Pinned.args = {};
+Pinned.args = {
+  task: {
+    id: "1",
+    title: "Test Task",
+    state: "TASK_INBOX",
+  },
+};
 
 export const Archived = Template.bind();
-Archived.args = {};
+Archived.args = {
+  task: {
+    id: "1",
+    title: "Test Task",
+    state: "TASK_INBOX",
+  },
+};
 
 export const LongTitle = Template.bind();
-LongTitle.args = {};
+LongTitle.args = {
+  task: {
+    id: "1",
+    title: "Test Task",
+    state: "TASK_INBOX",
+  },
+};
