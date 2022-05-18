@@ -6,7 +6,34 @@ export function TaskView({
   onArchiveTask,
   onPinTask,
 }) {
-  return <h1>This is a test</h1>;
+  return (
+    <div className={`list-item ${state}`}>
+      <label className="checkbox">
+        <input
+          type="checkbox"
+          defaultChecked={state === "TASK_ARCHIVED"}
+          disabled={true}
+          name="checked"
+        />
+        <span className="checkbox-custom" />
+      </label>
+      <div className="title">
+        <input
+          type="text"
+          value={title}
+          readOnly={true}
+          placeholder="Enter your title"
+        />
+      </div>
+      <div className="actions">
+        {state !== "TASK_ARCHIVED" && (
+          <a onClick="">
+            <span className={`icon-star`} />
+          </a>
+        )}
+      </div>
+    </div>
+  );
 }
 
 TaskView.propTypes = {
