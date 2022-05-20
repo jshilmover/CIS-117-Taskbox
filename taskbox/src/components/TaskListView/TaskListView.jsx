@@ -31,9 +31,14 @@ export function TaskListView({ loading, tasks, onPinTask, onArchiveTask }) {
     );
   }
 
+  const tasksInOrder = [
+    ...tasks.filter((task) => task.state === "TASK_PINNED"),
+    ...tasks.filter((task) => task.state !== "TASK_PINNED"),
+  ];
+
   return (
     <div className="list-items">
-      {tasks.map((task) => (
+      {tasksInOrder.map((task) => (
         <TaskView key={task.id} task={task} onPinTask onArchiveTask />
       ))}
     </div>
