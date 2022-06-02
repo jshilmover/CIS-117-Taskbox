@@ -1,7 +1,8 @@
 import React from "react";
-import { TaskListView } from "../../components/TaskListView/TaskListView";
+import TaskListView from "../../components/TaskListView/TaskListView";
+import PropTypes from "prop-types";
 
-export function HomePage({ error, loading, tasks, onPinTask, onArchiveTask }) {
+export function HomePage({ error }) {
   if (error) {
     return (
       <div className="page lists-show">
@@ -21,7 +22,15 @@ export function HomePage({ error, loading, tasks, onPinTask, onArchiveTask }) {
           <span className="title-wrapper">Taskbox App - Spring 2022</span>
         </h1>
       </nav>
-      <TaskListView loading={loading} tasks={tasks} />
+      <TaskListView />
     </div>
   );
 }
+
+HomePage.propTypes = {
+  error: PropTypes.string,
+};
+
+HomePage.defaultProps = {
+  error: null,
+};

@@ -14,32 +14,32 @@ Default.args = {
   loading: false,
   tasks: [
     {
-      ...TaskStories.Default.args,
+      ...TaskStories.Default.args.tasks,
       id: "1",
       title: "Test Task 1",
     },
     {
-      ...TaskStories.Default.args,
+      ...TaskStories.Default.args.tasks,
       id: "2",
       title: "Test Task 2",
     },
     {
-      ...TaskStories.Default.args,
+      ...TaskStories.Default.args.tasks,
       id: "3",
       title: "Test Task 3",
     },
     {
-      ...TaskStories.Default.args,
+      ...TaskStories.Default.args.tasks,
       id: "4",
       title: "Test Task 4",
     },
     {
-      ...TaskStories.Default.args,
+      ...TaskStories.Default.args.tasks,
       id: "5",
       title: "Test Task 5",
     },
     {
-      ...TaskStories.Default.args,
+      ...TaskStories.Default.args.tasks,
       id: "6",
       title: "Test Task 6",
     },

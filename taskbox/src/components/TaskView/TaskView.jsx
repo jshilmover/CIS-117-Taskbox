@@ -27,7 +27,7 @@ export function TaskView({
       </div>
       <div className="actions">
         {state !== "TASK_ARCHIVED" && (
-          <a onClick="">
+          <a onClick={}>
             <span className={`icon-star`} />
           </a>
         )}
